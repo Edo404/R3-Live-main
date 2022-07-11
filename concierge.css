@@ -1,0 +1,399 @@
+:root {
+	--d: 700ms;
+	--e: cubic-bezier(0.19, 1, 0.22, 1);
+	--font-sans: 'Rubik', sans-serif;
+	--font-serif: 'Cardo', serif;
+}
+
+/***************************************************************************/
+/*                             HOME IMAGE COVER                            */
+/***************************************************************************/
+.home-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/homepics/concierge_box.jpg);
+    background-position: center top;
+    background-size:cover;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.concierge-title{
+    font-family: 'Lato', sans-serif;
+    width: 10em;
+    align-items: center;
+    font-size: xx-large;color: white;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/***************************************************************************/
+/*                      SECTION IMAGE AND DESCRIPTION                      */
+/***************************************************************************/
+.about-it{
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+}
+
+.about-it-container {
+	position: absolute;
+	width: 100%;
+}
+
+.description-image {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	top: 50px;
+}
+
+.about-it-image {
+	position: relative;
+	right: 5em;
+	width: 32em;
+	max-width: 100%;
+}
+
+.about-it-desc {
+	position: relative;
+	top: 3em;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	max-width: 25em;
+}
+
+/***************************************************************************/
+/*                                 STEP BY STEP                            */
+/***************************************************************************/
+.page-content {
+	display: grid;
+	grid-gap: 3rem;
+	max-width: 80%;
+	padding: 1rem;
+	margin: 0 auto;
+	font-family:  'Lato', sans-serif;
+}
+
+@media (min-width: 600px) {
+	.page-content {
+		grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 800px) {
+	.page-content {
+		grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	color: whitesmoke;
+	background-color: whitesmoke;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 600px) {
+	.card {
+		height: 350px;
+    }
+}
+
+.card:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 110%;
+	background-size: cover;
+	background-position: 0 0;
+	transition: transform calc(var(--d) * 1.5) var(--e);
+	pointer-events: none;
+}
+
+.card:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110%;
+	height: 200%;
+	pointer-events: none;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.320) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.540) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.790) 100%);
+	transform: translateY(-50%);
+	transition: transform calc(var(--d) * 2) var(--e);
+}
+
+/* cards background */
+.card:nth-child(1):before {
+	background-image: url(images/EstConRen/card1.jpg);
+}
+
+.card:nth-child(2):before {
+	background-image: url(images/EstConRen/card2.jpg);
+}
+
+.card:nth-child(3):before {
+	background-image: url(images/EstConRen/card3.jpg);
+}
+
+
+
+.content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 1rem;
+	transition: transform var(--d) var(--e);
+	z-index: 1;
+}
+
+.content > * + * {
+	margin-top: 1rem;
+}
+
+.title {
+	font-size: 1.3rem;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.copy {
+	font-family: var(--font-serif);
+	font-size: 1.125rem;
+	font-style: italic;
+	line-height: 1.35;
+}
+
+/* cards animations over 600px */
+@media (hover: hover) and (min-width: 600px) {
+	.card:after {
+		transform: translateY(0);
+    }
+	
+	.content {
+		transform: translateY(calc(100% - 4.5rem));
+    }
+	
+	.content > *:not(.title) {
+		opacity: 0;
+		transform: translateY(1rem);
+		transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+    }
+	
+	.card:hover, .card:focus-within {
+		align-items: center;
+    }
+	
+	.card:hover:before, .card:focus-within:before {
+		transform: translateY(-4%);
+    }
+	
+	.card:hover:after, .card:focus-within:after {
+		transform: translateY(-50%);
+    }
+	
+	.card:hover .content, .card:focus-within .content {
+		transform: translateY(0);
+    }
+	
+	.card:hover .content > *:not(.title), .card:focus-within .content > *:not(.title) {
+		opacity: 1;
+		transform: translateY(0);
+		transition-delay: calc(var(--d) / 8);
+    }
+	
+	.card:focus-within:before, .card:focus-within:after, .card:focus-within .content, .card:focus-within .content > *:not(.title) {
+		transition-duration: 1s;
+    }
+}
+
+/***************************************************************************/
+/*                                  MEDIA FOR 1180PX                       */
+/***************************************************************************/
+@media (max-width: 1180px){
+	/* cover image responsive */
+	.home-3 {
+		height: 500px;
+	}
+	
+	/* mobile version section image description */
+	.about-it-container{
+		display: none;
+	}
+	
+	/* mobile version of the picture */
+	.concierge-mobile{
+		visibility: visible;
+		position: absolute;
+		width: 100%;
+		height: 50vh;
+		background-position: center top;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url(images/EstConRen/campanello-robbia.png);
+		opacity: 0.50;
+		text-align: center;
+	}
+	.box-phone{
+		position: relative;
+		top: 5em;
+		font-family: 'Lato', sans-serif;
+		font-size: 1em;
+		color: white;
+		text-align: center;
+		max-width: 50rem;
+		margin: 0 auto;
+	  }
+	
+	  .h1-phone {
+		font-size: 40px;
+		margin-top: 0.5em;
+	  }
+
+}
+
+
+
+
+   
+   #slider {
+	 position: relative;
+	 width: 900px;
+	 height: 500px;
+	 margin: 100px auto;
+	 overflow: hidden;
+   
+	 box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+   }
+   #slider ul {
+	 position: relative;
+	 list-style: none;
+	 height: 100%;
+	 width: 10000%;
+	 padding: 0;
+	 margin: 0;
+   
+	 transition: all 750ms ease;
+	 left: 0;
+   }
+   #slider ul li {
+	 position: relative;
+	 height: 100%;
+   
+	 float: left;
+   }
+   #slider ul li img{
+	 width: 900px;
+	 height: 500px;
+   
+   }
+   
+
+   #prev, #next {
+	   display: none;
+   }
+
+   quote{
+	   position: absolute;
+	   left: 47%;
+	   top: 6rem;
+	   color: #790405;
+	   font-family: 'Lato';
+   }
+
+   .slider__txt{
+	   position: absolute;
+	   top: 40%;
+	   left: 10%;
+	   font-family: 'Lato';
+   }
+   @media (max-width: 900px) {
+	#slider {
+		width: 500px;
+	 	height: 300px;
+    }
+	#slider ul li img{
+		width: 500px;
+		height: 300px;
+	  
+	}
+	  
+    quote{
+		top: 3rem;
+	}
+ 
+	.slider__txt{
+		left: 2%;
+	}
+}
+
+@media (max-width: 500px) {
+	#slider {
+		width: 280px;
+	 	height: 150px;
+    }
+	#slider ul li img{
+		width: 280px;
+		height: 150px;
+	}
+	  
+	quote{
+		top: 1rem;
+		font-size: 50px;
+	}
+ 
+	.slider__txt{
+		left: 2%;
+		font-size: 12px;
+	}
+}
+
+.slideshoww-containers {
+	position: relative;
+	background-image: url(images/recensioni.png);
+	margin-top: 100px;
+  }
+  
+  
+.Slidesmy {
+	display: none;
+	padding: 15%;
+	text-align: center;
+}
+  
+  
+q {
+	font-family: "Lato", sans-serif;
+	color: #fff;
+	font-size: 22px;
+	font-style: italic;
+}
+  
+  
+.author8 {
+	font-family: "Lato", sans-serif;
+	color: grey;
+}
+  
+.quote {
+	font-family: 'Lato';
+	font-size: 100px;
+	color: #B18904;
+	position: absolute;
+	top: 10%;
+	left: 49%;
+}

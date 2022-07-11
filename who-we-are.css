@@ -1,0 +1,214 @@
+.home-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/Chisiamo/squad.jpg);
+    background-position: center top;
+    background-size:cover;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.info-title{
+    font-family: 'Lato', sans-serif;
+    width: 10em;
+    align-items: center;
+    font-size: xx-large;color: white;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.about-it-2{
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+}
+
+.about-it-container-2 {
+	position: absolute;
+	width: 100%;
+}
+
+.description-image-2 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	top: 50px;
+}
+
+.about-it-image-2 {
+	position: relative;
+	right: 5em;
+	width: 22em;
+	max-width: 100%;
+}
+
+.about-it-desc-2 {
+	position: relative;
+	top: 4.5em;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	max-width: 25em;
+}
+
+
+
+.about-it-3{
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+}
+
+.about-it-container-3 {
+	position: absolute;
+	width: 100%;
+}
+
+.description-image-3 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.about-it-image-3 {
+	position: relative;
+	left: 28em;
+	width: 22em;
+	max-width: 100%;
+}
+
+.about-it-desc-3 {
+	position: relative;
+	right: 29em;
+	top: 6em;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	max-width: 25em;
+}
+
+@media (max-width: 1180px){
+	.home-5 {
+		height: 500px;
+	}
+	.about-it-container-2{
+		display: none;
+	}
+
+	.estate-mobile-2{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+		visibility: visible;
+		position: absolute;
+		width: 100%;
+		height: 50vh;
+		background-position: center top;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url(images/Chisiamo/padre-robbia-mobile.jpg);
+		opacity: 0.50;
+		text-align: center;
+	  }
+
+	  .box-mobile{
+		position: relative;
+		top: 3em;
+		font-family: 'Lato', sans-serif;
+		font-size: 18px;
+		color: white;
+		text-align: center;
+		max-width: 50rem;
+		margin: 0 auto;
+	  }
+
+	  .about-it-container-3{
+		display: none;
+	}
+
+	  	.estate-mobile-3{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+		visibility: visible;
+		position: absolute;
+		width: 100%;
+		height: 50vh;
+		background-position: center top;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url(images/Chisiamo/robbiani-mobile.jpg);
+		opacity: 0.50;
+		text-align: center;
+	  } 
+
+      .h1-mobile {
+          font-size: 30px;
+      }
+
+      .p-mobile{
+          font-size: 15px;
+      }
+}
+
+@media (max-width: 280px){
+    .p-mobile{
+        font-size: 12px;
+    }
+}
+
+.section-1 {
+	height: 70vh;
+}
+
+.iframe-container-1 {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-container-1 iframe {
+    position: absolute;
+    align-items: center;
+    top: 10%;
+    
+    width: 100%;
+    height: 80%;
+}
+
+.video-desc-1 {
+    padding-top: 7%;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.video-paragraph-1 {
+    font-size: 17px;
+}
+
+.why-r3 {
+	background-image: url(images/sfondo_logo.png);
+	width: 100%;
+  height: 70vh;
+  background-position: center top;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 550px) {
+
+	.why-us {
+		
+		font-size: 13px;
+	}
+	.why-r3{
+		width: 100%;
+		height: 80vh;
+	}
+}
