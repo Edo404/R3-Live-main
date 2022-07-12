@@ -313,6 +313,7 @@ body {
 
 .box-2 p {
   text-align: justify;
+  text-justify: newspaper;
   font-size: 13px;
 }
 
@@ -706,6 +707,7 @@ svg {
 
   .box-mobile p {
     text-align: justify;
+    text-justify: newspaper;
   }
 
   .h1-mobile {
